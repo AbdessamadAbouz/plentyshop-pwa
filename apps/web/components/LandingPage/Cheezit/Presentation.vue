@@ -1,6 +1,6 @@
 <template>
   <div :class="[bgColor, 'w-full']"> 
-    <div class="container ">
+    <div class="container mb-0">
       <div class="align-items justify-center">
         <h2 
           v-if="header"
@@ -15,13 +15,13 @@
         </div>
 
         <div class="text-left lg:flex lg:flex-col h-full lg:max-w-[550px] justify-center">
-          <div class="mb-[20px]">
+          <div class="mb-0">
             <p :class="['text-xs uppercase text-[17px] block-berthold', textColor]" v-html="SubTitle"></p>
-            <h2 :class="['text-2xl mt-2 text-[33px] my-[16px] leading-[33px] block-berthold', textColor]" v-html="Title">
+            <h2 :class="['text-2xl mt-0 text-[33px] my-[16px] leading-[33px] block-berthold', textColor]" v-html="Title">
             </h2>
             <p :class="['mt-4 text-sm text-[20px] pr-[20px] leading-[27px] max-w-[500px] block-berthold', textColor]" v-html="Description">
             </p>
-            <p :class="['mt-2 text-[10px] block-berthold mt-[40px]', textColor]" v-html="Additional"></p>
+            <p v-if="Additional" :class="['mt-0 text-[10px] block-berthold mt-[40px]', textColor]" v-html="Additional"></p>
           </div>
 
           <NuxtLink v-if="!noButton && !mailTo"
