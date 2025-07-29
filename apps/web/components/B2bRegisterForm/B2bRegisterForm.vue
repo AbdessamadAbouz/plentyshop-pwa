@@ -11,6 +11,17 @@
       <ErrorMessage name="customerGroup" class="text-red-500 text-sm mt-1" />
     </div>
 
+    <!-- Customer Origin -->
+    <div class="col-span-2 pb-5">
+      <select id="customerOrigin" v-model="customerOrigin" v-bind="customerOriginAttrs" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500">
+        <option disabled value="">Wählen Sie die Kundenherkunft aus</option>
+        <option v-for="Origin in customerOrigins" :key="Origin.id" :value="String(Origin.id)">
+          {{ Origin.name }}
+        </option>
+      </select>
+      <ErrorMessage name="customerOrigin" class="text-red-500 text-sm mt-1" />
+    </div>
+
     <!-- Email -->
     <div class="col-span-2 pb-5">
       <input id="email" v-model="email" v-bind="emailAttrs" type="email" placeholder="E-Mail*" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500" />
@@ -164,6 +175,7 @@ const recaptchaRef = ref<{
 const emits = defineEmits(['loggedIn', 'change-view']);
 const registerForm = ref<HTMLFormElement | null>(null);
 const customerGroups = ref<{ id: number; name: string }[]>([]);
+const customerOrigins = ref<{ id: number; name: string }[]>([]);
 const validationSchema = toTypedSchema(
   object({
     contact: object({
@@ -204,6 +216,7 @@ const validationSchema = toTypedSchema(
     privacyPolicy: boolean().isTrue().required('Bitte akzeptieren Sie die Daten­schutz­erklärung.'),
     recaptcha: string().notRequired(),
     customerGroup: string().required('Kundengruppe ist erforderlich').notOneOf([""], 'Bitte wählen Sie eine Kundengruppe'),
+    customerOrigin: string().required('Kundenherkunft ist erforderlich').notOneOf([""], 'Bitte wählen Sie eine Kundenherkunft aus'),
   })
 );
 
@@ -239,6 +252,7 @@ let initialValues =  {
     },
     //recaptcha: '',
     customerGroup : "32",
+    customerOrigin : "64",
 }
 
 initialValues =  {
@@ -273,6 +287,7 @@ initialValues =  {
     },
     //recaptcha: '',
     customerGroup : "",
+    customerOrigin : "",
 }
 
 const { values,defineField, handleSubmit,setFieldValue } = useForm({
@@ -296,21 +311,31 @@ const [town, townAttrs] = defineField('billingAddress.town');
 const [countryId, countryIdAttrs] = defineField('billingAddress.countryId');
 const [gender, genderAttrs] = defineField('billingAddress.gender');
 const [customerGroup, customerGroupAttrs] = defineField('customerGroup');
+const [customerOrigin, customerOriginAttrs] = defineField('customerOrigin');
 
 
 onMounted(() => {
   customerGroups.value = [
-  { id: 30, name: 'Kiosk' },
-  { id: 32, name: 'Gastronomie' },
-  { id: 34, name: 'Hotel' },
-  { id: 36, name: 'Retailer' },
-  { id: 43, name: 'Büro' },
-  { id: 44, name: 'Eventagentur' },
-  { id: 45, name: 'Freizeitgastronomie' },
-  { id: 46, name: 'Getränkemarkt' },
-  { id: 48, name: 'Verein' },
-  { id: 56, name: 'Vending' }
-]
+    { id: 30, name: 'Kiosk' },
+    { id: 32, name: 'Gastronomie' },
+    { id: 34, name: 'Hotel' },
+    { id: 36, name: 'Retailer' },
+    { id: 43, name: 'Büro' },
+    { id: 44, name: 'Eventagentur' },
+    { id: 45, name: 'Freizeitgastronomie' },
+    { id: 46, name: 'Getränkemarkt' },
+    { id: 48, name: 'Verein' },
+    { id: 56, name: 'Vending' }
+  ]
+
+  customerOrigins.value = [
+    { id: 64, name: 'Onlinesuche' },
+    { id: 65, name: 'Messe/ Event' },
+    { id: 66, name: 'Empfehlung' },
+    { id: 67, name: 'Social Media' },
+    { id: 68, name: 'Werbung/ Anzeige' },
+    { id: 69, name: 'Sonstiges' }
+  ]
 });
 
 watch(
@@ -384,8 +409,9 @@ const onSubmit = handleSubmit(async (values) => {
 const addCustomerGroup = async () => {
   const contactId = CustomerId.value;
   const customerGroupId = customerGroup.value;
+  const customerOriginId = customerOrigin.value;
 
-  const apiEndpoint = `/rest/WWExtendRegistrationForm/setCustomerGroup?customerGroup=${customerGroupId}&contactId=${contactId}`;
+  const apiEndpoint = `/rest/WWExtendRegistrationForm/setCustomerGroup?customerGroup=${customerGroupId}&customerOrigin=${customerOriginId}&contactId=${contactId}`;
 
   try {
     const response = await axios.get(apiEndpoint, {
