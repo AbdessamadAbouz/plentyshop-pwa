@@ -393,6 +393,7 @@ const loginVertriebUser = async () => {
     localStorage.setItem('vertrieb-token', response.data.token)
 
     showNotification('Login erfolgreich!', 'success')
+    setTimeout(() => window.location.reload(), 500)
   } catch (error: any) {
     const errMsg = error.response?.data?.error || 'Login fehlgeschlagen'
     showNotification(errMsg, 'error')
