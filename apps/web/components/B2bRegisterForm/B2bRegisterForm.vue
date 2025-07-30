@@ -329,6 +329,7 @@ onMounted(() => {
   ]
 
   customerOrigins.value = [
+    { id: 63, name: 'Außendienstmitarbeiter/ Vertrieb' },
     { id: 64, name: 'Onlinesuche' },
     { id: 65, name: 'Messe/ Event' },
     { id: 66, name: 'Empfehlung' },
