@@ -19,9 +19,9 @@
             <p :class="['text-xs uppercase text-[17px] block-berthold', textColor]" v-html="SubTitle"></p>
             <h2 :class="['text-2xl mt-0 text-[33px] my-[16px] leading-[33px] block-berthold', textColor]" v-html="Title">
             </h2>
-            <p :class="['mt-4 text-sm text-[20px] pr-[20px] leading-[27px] max-w-[500px] block-berthold', textColor]" v-html="Description">
+            <p :class="['mt-4 text-[18px] pr-[20px] leading-[27px] max-w-[500px] block-berthold-condensed', textColor]" v-html="Description">
             </p>
-            <p v-if="Additional" :class="['mt-0 text-[10px] block-berthold mt-[40px]', textColor]" v-html="Additional"></p>
+            <p v-if="Additional" :class="['mt-0 text-[10px] block-berthold-condensed mt-[40px]', textColor]" v-html="Additional"></p>
           </div>
 
           <NuxtLink v-if="!noButton && !mailTo"

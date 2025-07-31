@@ -99,10 +99,22 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Block Berthold Condensed Regular';
+  src: url('/fonts/block-berthold-condensed-regular.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 .block-berthold {
   font-family: 'Block Berthold Regular', sans-serif !important;
 }
 
+.block-berthold-condensed {
+  font-family: 'Block Berthold Condensed Regular', sans-serif !important;
+}
 
 @layer utilities {
   .g-90 {

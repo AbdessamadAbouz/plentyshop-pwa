@@ -12,7 +12,7 @@
         </p>
       </div>
       <div>
-        <p class="text-white text-sm text-[20px] font-normal mb-[30px] block-berthold"  v-html="description">
+        <p class="text-white text-[18px] font-normal mb-[30px] block-berthold-condensed"  v-html="description">
         </p>
         <NuxtLink v-if="buttonText"
                       :to="buttonLink"
