@@ -96,6 +96,8 @@ const {
   scrollToShippingAddress,
 } = useCheckout();
 
+const { deleteCart } = useCart();
+
 const { loadPayment, loadShipping, paymentMethods, selectedPaymentId } = useCheckoutPagePaymentAndShipping();
 const disableShippingPayment = computed(() => loadShipping.value || loadPayment.value);
 const disableBuyButton = computed(
@@ -172,7 +174,7 @@ const handleRegularOrder = async () => {
 
   if (data?.order?.id) {
     emit('frontend:orderCreated', data);
-    clearCartItems();
+    deleteCart();
     navigateTo(localePath(paths.confirmation + '/' + data.order.id + '/' + data.order.accessKey));
   }
 };
