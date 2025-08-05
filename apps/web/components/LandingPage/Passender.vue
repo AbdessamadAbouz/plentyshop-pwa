@@ -30,11 +30,11 @@
       </div>
     </div>
 
-    <LandingPageProductDisplay
+    <!-- <LandingPageProductDisplay
       v-if="cerealienProducts.length"
       :products="cerealienProducts"
       class="mt-[107px] mb-[20px]"
-    />
+    /> -->
   </div>
     
 </template>

@@ -25,12 +25,12 @@
     <SfIconClose class="cursor-pointer" @click="showSuccessNotification = false" />
   </div>
 
-  <div class="px-4 my-6 overflow-auto">
+  <div class="container px-4 my-6 overflow-auto">
     <table class="w-full table-auto border-collapse bg-white shadow rounded">
       <thead class="bg-red-color text-white">
         <tr>
-          <th class="p-3 text-left">ART.NR.</th>
           <th class="p-3 text-left">NAME</th>
+          <th class="p-3 text-left">PRICE</th>
           <th class="p-3 text-left">VERP.-EINHEIT</th>
           <th class="p-3 text-center">ANZAHL</th>
         </tr>
@@ -41,7 +41,6 @@
           :key="index"
           class="border-t hover:bg-gray-50"
         >
-          <td class="p-3">{{ productGetters.getId(product) }}</td>
           <td class="p-3 flex items-center gap-2">
             <img
               :src="addModernImageExtension(productGetters.getCoverImage(product))"
@@ -50,6 +49,7 @@
             />
             <span>{{ productGetters.getName(product) }}</span>
           </td>
+          <td class="p-3">{{ n(getProductPrice(product), 'currency') }}</td>
           <td class="p-3">
             {{ productGetters.getUnitContent(product) }} {{ productGetters.getUnitName(product) }}
           </td>
@@ -83,6 +83,22 @@
     </table>
   </div>
 
+    <div class="flex justify-between items-center mx-10 my-6">
+    <div></div>
+    <UiButton
+      variant="primary"
+      @click="addSelectedToBasket"
+      :disabled="!hasProductsToAdd || bulkAddLoading"
+      class="grid lg:flex lg:items-center"
+    >
+      <template #prefix>
+        <SfIconShoppingCart size="sm" class="mr-2" />
+      </template>
+      <span v-if="!bulkAddLoading" class="text-[10px] leading-[15px] lg:text-[16px]">{{ $t('bulkAdd.addAllToBasket') }} ({{ selectedProductsCount }})</span>
+      <span v-else><SfLoaderCircular size="sm" class="mr-2" />{{ $t('bulkAdd.adding') }}</span>
+    </UiButton>
+  </div>
+
   <div
     v-if="!loading && (!productsCatalog?.products || productsCatalog.products.length === 0)"
     class="text-center p-10 bg-gray-50 rounded-lg my-6 mx-10"
@@ -110,7 +126,7 @@ import { SfLoaderCircular } from '@storefront-ui/vue';
 const { isAuthorized } = useCustomer();
 const { addModernImageExtension } = useModernImage();
 
-const { t, locale } = useI18n();
+const { t, locale, n } = useI18n();
 const route = useRoute();
 const router = useRouter();
 const { data: productsCatalog, loading, fetchProducts } = useProducts();
@@ -118,7 +134,18 @@ const { data: categoryTree } = useCategoryTree();
 const { buildCategoryLanguagePath } = useLocalization();
 const { setCategoriesPageMeta } = useCanonical();
 const { getFacetsFromURL, checkFiltersInURL } = useCategoryFilter();
+const {  getPropertiesPrice } = useProductOrderProperties();
 
+function getProductPrice(product: Product): number {
+    if (!isAuthorized.value) return 0;
+
+  let price = (
+    (productGetters.getSpecialOffer(product) ||
+      productGetters.getGraduatedPriceByQuantity(product, 1)?.unitPrice.value ||
+      0) + getPropertiesPrice(product)
+  );
+  return price > 1000 ? 0 : price
+}
 
 const breadcrumbs = computed(() => {
   if (productsCatalog.value.category) {

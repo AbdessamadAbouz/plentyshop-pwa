@@ -31,10 +31,10 @@
     
     <SfLoaderCircular v-if="loading" class="fixed top-[50%] right-0 left-0 m-auto z-[99999]" size="2xl" />
 
-    <LandingPageProductDisplay
+    <!-- <LandingPageProductDisplay
       v-if="cerealienProducts.length"
       :products="cerealienProducts"
-    />
+    /> -->
       
     <LandingPageComparison 
       title="Je mehr KELLOGG‘s<span class='text-[14px] align-super'>®</span> gegessen wird, desto weniger Belag"
@@ -78,10 +78,10 @@ präsentiert sich der Kellogg’s<span class='text-[10px] align-super'>®</span>
       imageSrc="/images/3D Pringles 40g Composing.png" imageLeft />
     
 
-    <LandingPageProductDisplay 
+    <!-- <LandingPageProductDisplay 
       v-if="pringlesProducts.length"
       :products="pringlesProducts"
-    />
+    /> -->
 
     <LandingPagePresentation :bgColor="'bg-gray-100'" imageSrc="/images/composing_pringles.png" 
       SubTitle="Drehautomat für Pringles<span class='text-[10px] align-super'>®</span>" Title="Die impulsstarke und mobile Snackinsel" 

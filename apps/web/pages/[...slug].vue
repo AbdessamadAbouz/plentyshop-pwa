@@ -20,6 +20,7 @@
             <SfIconGridView class="w-6 h-6" />
           </button>
           <button
+            v-if="isAuthorized"
             @click="viewMode = 'list'"
             :class="viewMode === 'list' ? 'text-blue-600' : 'text-gray-400 hover:text-gray-600'"
             aria-label="List view"
