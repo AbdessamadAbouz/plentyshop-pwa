@@ -65,7 +65,7 @@
                     <SfListItem
                                 :tag="NuxtLink"
                                 size="sm"
-                                :href="localePath(generateCategoryLink(node))"
+                                :href="categoryTreeGetters.getName(node) == 'Cheezit' ? '/cheezit' : localePath(generateCategoryLink(node))"
                                 class="kl-mega-menu-item g-16-m flex flex-col mb-2 hover:bg-white"
                                 :id="categoryTreeGetters.getSlug(node)">
                       {{ categoryTreeGetters.getName(node) }}
