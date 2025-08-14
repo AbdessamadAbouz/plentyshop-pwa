@@ -4,7 +4,7 @@
       <!-- Text Section -->
       <div class="bg-[#2ea533] flex-1 px-4 py-2 flex items-center">
         <p class="!text-white shipping-text m-0">
-          <template v-if="remainingAmount > 0">
+          <template v-if="remainingAmount > 0 && getShippingAmount(cartGetters.getShippingPrice(props.cart)) !== 'Free'">
             Noch
             <strong class="font-bold text-white">
               {{ formattedRemainingAmount }}
@@ -80,7 +80,7 @@ const props = defineProps<{
   cart: any;
 }>();
 
-const { n } = useI18n();
+const { t, n } = useI18n();
 
 const classId = userData?.value?.user?.classId;
 const rule = shippingRules.find(rule => rule.id === classId);
@@ -103,4 +103,9 @@ const progressBarWidth = computed(() => {
 });
 
 const progressBarColor = computed(() => (remainingAmount.value === 0 ? '#0AB380' : '#f60b45'));
+
+const getShippingAmount = (amount: number) => {
+  return amount === 0 ? "Free" : n(Number(amount), 'currency');
+};
+
 </script>
