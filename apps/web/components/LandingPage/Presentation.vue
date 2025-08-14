@@ -11,7 +11,7 @@
         class='presentation-sizes lg:flex lg:flex-row  items-center my-8 rounded-[1vw] shadow-none w-full lg:min-h-[480px] justify-between gap-4'
       >
         <div v-if="imageLeft" class="lg:flex items-center justify-center lg:max-w-[550px] h-auto">
-          <img :src="imageSrc" alt="Frühstücksbuffet" class="rounded-[1vw] w-full h-full " />
+          <img :src="imageSrc" alt="Frühstücksbuffet" class="rounded-[1vw] w-full h-full lg:max-h-[480px]" />
         </div>
 
         <div class="text-left lg:flex lg:flex-col h-full lg:max-w-[550px] justify-center">
@@ -37,8 +37,8 @@
           </a>
         </div>
 
-        <div v-if="!imageLeft" class="h-full lg:flex items-center justify-center mt-[20px]">
-          <img :src="imageSrc" alt="Frühstücksbuffet" class="rounded-[1vw] lg:max-w-[550px] h-auto" />
+        <div v-if="!imageLeft" class="h-full lg:flex items-center justify-center mt-[20px] w-[550px]">
+          <img :src="imageSrc" alt="Frühstücksbuffet" class="rounded-[1vw] lg:max-w-[550px] lg:max-h-[450px] h-auto" />
         </div>
       </div>
     </div>
