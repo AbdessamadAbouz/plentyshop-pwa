@@ -1,5 +1,5 @@
 <template>
-  <div :class="[bgColor, 'w-full py-[62px]']"> 
+  <div :class="[bgColor, 'w-full', noPadding ? '' : 'py-[62px]']"> 
     <div class="container ">
       <div class="align-items justify-center mt-6">
         <h2 
@@ -37,7 +37,7 @@
           </a>
         </div>
 
-        <div v-if="!imageLeft" class="h-full lg:flex items-center justify-center mt-[20px] w-[550px]">
+        <div v-if="!imageLeft" class="h-full lg:flex items-center justify-center mt-[20px] lg:w-[550px]">
           <img :src="imageSrc" alt="Frühstücksbuffet" class="rounded-[1vw] lg:max-w-[550px] lg:max-h-[450px] h-auto" />
         </div>
       </div>
@@ -58,6 +58,7 @@ defineProps({
   ButtonText: { type: String, default: '' },
   noButton: Boolean,
   buttonLink :String,
-  mailTo:Boolean
+  mailTo:Boolean,
+  noPadding: { type: Boolean, default: false }
 });
 </script>

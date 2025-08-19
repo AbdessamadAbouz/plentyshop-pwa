@@ -7,7 +7,12 @@
       <h2 class="text-lg font-semibold text-gray-800 text-[23px]">
         {{title}}
       </h2>
-      <p class="text-[#2C2C2C] mt-1 lg:text-[40px] text-[20px] mt-[14px] font-bold" v-html="subtitle">
+      <p 
+        :class="[
+          'text-[#2C2C2C] mt-1 lg:text-[40px] text-[20px] mt-[14px] font-bold', 
+          isMobile && headerTop ? 'lg:text-[40px] !text-[30px] !font-bold justify-content text-gray-800': ''
+        ]"
+      v-html="subtitle">
       </p>
     </div>
     <div>
@@ -29,8 +34,13 @@ defineProps({
   description: String,
   buttonText: String,
   buttonLink:String,
-  noMarginTop: { type: Boolean, default: false }
+  noMarginTop: { type: Boolean, default: false },
+  headerTop: { type: Boolean, default: false }
 });
+
+
+const viewport = useViewport();
+const isMobile = computed(() => viewport.isLessThan('lg'));
 </script>
 
 <style>

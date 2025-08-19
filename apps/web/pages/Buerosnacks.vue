@@ -5,6 +5,8 @@
       description="Wenn viele Menschen im Haus sind, braucht es Snacks, die einfach funktionieren. Ob Büro, Schule oder Betrieb – gefragt sind Produkte, die schnell bereitstehen, flexibel einsetzbar sind und gern genommen werden.<br>Mit Marken wie <a class='font-bold' href='https://b2b.kelloggs-shop.de/snacks/pringles'>Pringles®</a> und <a href='https://b2b.kelloggs-shop.de/cheezit' class='font-bold'>Cheez-It®</a> Snap’d wird aus dem Pausenraum ein Snackmoment – ganz ohne großen Aufwand."
       buttonText="Zum Snack-Angebot"
       buttonLink="/snacks/pringles/"
+      noMarginTop
+      headerTop
     />
 
     <LandingPagePresentation imageSrc="/images/Buerosnacks/PringlesAutomat.jpg" 
@@ -17,7 +19,7 @@
                     • Ohne Kühlung haltbar<br>
                     Perfekt für Automaten, Auslagen oder Snackstationen.<br>"
         noButton
-        
+        noPadding
         />
     <LandingPagePresentation imageLeft :bgColor="'bg-gray-100'" imageSrc="/images/Buerosnacks/Cheezit.png" 
         Title="Verlässliche Auswahl für alle, die zwischendurch eine Pause brauchen" 
@@ -25,7 +27,7 @@
                     Die Lösung: Snacks, die rund um die Uhr bereitstehen, unabhängig von Ort oder Uhrzeit.<br>
                     Ob früh morgens, zwischen Schichten oder am Wochenende – <a class='font-bold' href='https://b2b.kelloggs-shop.de/snacks/pringles'>Pringles®</a> und <a href='https://b2b.kelloggs-shop.de/cheezit' class='font-bold'>Cheez-It®</a> Snap’d sind immer einsatzbereit." 
         noButton
-        
+        noPadding
         />
     
 
@@ -40,6 +42,7 @@
                     Jetzt Sortiment erweitern – mit Snacks, die bleiben."
       Additional="* Quelle: NIQ Brand Health Tracker 2024"
       noButton
+      noPadding
       />
 
 
