@@ -6,7 +6,9 @@
       <img>
     </div>
     <div v-else >
-      <img style="width: 100%;" :src="isMobile ? '/images/cheesit/CheezitBanner2.png' : '/images/cheesit/CheezitBanner.png'" alt="Cheezit">
+      <a href="https://cheezit-aktion.de/">
+        <img style="width: 100%;" :src="isMobile ? '/images/cheesit/CheezitBanner2.png' : '/images/cheesit/CheezitBanner.png'" alt="Cheezit">
+      </a>
     </div>
   </section>
 </template>
