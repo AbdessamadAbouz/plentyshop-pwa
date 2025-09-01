@@ -1,15 +1,21 @@
 <template>
-  <section class="kl-collection-hero">
-    <div class="kl-collection-hero__content">
+  <section :class="categoryName != 'Cheezit' ? 'kl-collection-hero' : ''">
+    <div v-if="categoryName != 'Cheezit'" class="kl-collection-hero__content">
       <div class="kl-collection-hero__category">{{ categoryTitle }}</div>
       <h1 class="kl-collection-hero__title">{{ categoryName }}</h1>
       <img>
+    </div>
+    <div v-else >
+      <img style="width: 100%;" :src="isMobile ? '/images/cheesit/CheezitBanner2.png' : '/images/cheesit/CheezitBanner.png'" alt="Cheezit">
     </div>
   </section>
 </template>
 
 <script setup>
 import { computed } from 'vue';
+
+const viewport = useViewport();
+const isMobile = computed(() => viewport.isLessThan('lg'));
 
 const { categoryName } = defineProps({
   categoryName: String
