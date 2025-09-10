@@ -73,6 +73,28 @@
             Alle ansehen
           </NuxtLink>
         </div>
+        <div
+             id="cheezit"
+             class="kl-our-products-card"
+             tabindex="0"
+             role="region"
+             aria-labelledby="cheezit-title"
+             aria-describedby="cheezit-description">
+          <div class="kl-img-wrapper">
+            <NuxtLink to="/snacks/cheezit">
+              <img src="/images/cheesit/cheez-it-new.png" alt="Müsli">
+            </NuxtLink>
+          </div>
+          <p id="cheezit-title" class="kl-card-title text-white">Cheez It</p>
+          <p id="cheezit-description" class="kl-card-description text-white">
+            Cheez It Snap‘d Double Cheese und Cheese &Chilli bringt Ihr Snackregal in Schwung!
+Für Kioske, Hotels oder Convenience‑Shops – bringen Sie die Kultmarke aus den USA in Ihr Regal.</p>
+          <NuxtLink
+                    to="/snacks/cheezit"
+                    class="bg-white rounded-full p-3 mx-4 text-black text-center g-16 mb-4 hover:bg-primary-500 hover:text-white border-2 border-white mt-auto">
+            Alle ansehen
+          </NuxtLink>
+        </div>
       </div>
     </div>
   </section>
@@ -210,5 +232,9 @@
     display: block;
     padding-right: 15px;
   }
+}
+.kl-our-products-wrapper .kl-our-products-card#cheezit {
+    background: #f60b45;
+    color: white;
 }
 </style>
