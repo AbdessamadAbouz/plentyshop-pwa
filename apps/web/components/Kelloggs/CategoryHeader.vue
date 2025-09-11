@@ -34,6 +34,7 @@ if (categoryName == "B2B Starterkits") imageName = 'pringles'
 
 if (['pringles', 'pop-tarts'].includes(imageName)) categoryTitle = 'Snacks';
 
+if (categoryName == "Automaten") categoryTitle = '';
 const bgImage = computed(() => `url('/images/kelloggs/hero/${imageName}.png')`);
 const bgImageHover = computed(() => `url('/images/kelloggs/hero/${imageName}-hover.png')`);
 const bgImageMob = computed(() => `url('/images/kelloggs/hero/${imageName}-mob.png')`);
