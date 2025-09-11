@@ -63,7 +63,7 @@ export default defineNuxtConfig({
       apiEndpoint: process.env.API_ENDPOINT,
       isDev: process.env.NODE_ENV === 'development',
       cookieGroups: cookieConfig,
-      turnstileSiteKey: process.env?.TURNSTILESITEKEY ?? '',
+      turnstileSiteKey: process.env?.TURNSTILESITEKEY ?? '0x4AAAAAAANx3aXDh7UR35x0',
       useAvif: process.env?.IMAGEAVIF === 'true',
       useWebp: process.env?.IMAGEWEBP === 'true',
       validateReturnReasons: process.env.VALIDATE_RETURN_REASONS === '1',
