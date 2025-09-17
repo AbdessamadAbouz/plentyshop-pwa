@@ -9,19 +9,16 @@
       headerTop
     />
 
-    <LandingPagePresentation imageSrc="/images/snackpringles/1.jpg" 
+    <LandingPagePresentation imageSrc="/images/snackpringles/automaten.png" 
         Title="Wenn sich was dreht – ganz ohne Technik" 
-        Description="Der Drehautomat funktioniert mechanisch – kein Stromanschluss, keine Wartung.<br>
-                  Kund:innen verstehen das System auf einen Blick: Geld einwerfen, drehen, fertig.<br>
-                  Die Dosen lassen sich schnell auffüllen, das Handling ist einfach.<br>
+        Description="Der Drehautomat funktioniert mechanisch – kein Stromanschluss, keine Wartung. Kund:innen verstehen das System auf einen Blick: Geld einwerfen, drehen, fertig. Die Dosen lassen sich schnell auffüllen, das Handling ist einfach.
                   Mit dem optionalen Dispenser kannst du die Produkte zusätzlich platzieren – da, wo sie direkt ins Auge fallen."
         noButton
         noPadding
         />
     <LandingPagePresentation imageLeft :bgColor="'bg-gray-100'" imageSrc="/images/snackpringles/2.jpg" 
         Title="Marke zeigen – Aufmerksamkeit nutzen" 
-        Description="Pringles<span class='text-sm align-super'>®</span> ist bekannt* – das erleichtert den Verkauf.<br>
-                  Die auffällige Optik macht den Automaten zum Hingucker, das vertraute Produkt zum Impulsgeber. Drehautomat und Dispenser – beide brauchen wenig Platz und können flexibel integriert werden. So wird aus einem freien Spot schnell ein Snackangebot, das sich sehen lassen kann." 
+        Description="Pringles<span class='text-sm align-super'>®</span> ist bekannt* – das erleichtert den Verkauf. Die auffällige Optik macht den Automaten zum Hingucker, das vertraute Produkt zum Impulsgeber. Drehautomat und Dispenser – beide brauchen wenig Platz und können flexibel integriert werden. So wird aus einem freien Spot schnell ein Snackangebot, das sich sehen lassen kann." 
         noButton
         noPadding
         />
@@ -29,9 +26,7 @@
 
     <LandingPagePresentation imageSrc="/images/snackpringles/3.jpg" 
       Title="Praktisch im Handling, klar im Konzept" 
-      Description="Aufstellen, nachfüllen, verkaufen – mehr braucht’s nicht.<br>
-                  Der Automat funktioniert ohne Technik, der Dispenser ohne Münzeinwurf.<br>
-                  Beides lässt sich gut kombinieren – zum Beispiel Automaten fürs Snackregal, Dispenser für die Theke. Die Nachbestellung der Dosen? Geht direkt über uns.<br>
+      Description="Aufstellen, nachfüllen, verkaufen – mehr braucht’s nicht. Der Automat funktioniert ohne Technik, der Dispenser ohne Münzeinwurf. Beides lässt sich gut kombinieren – zum Beispiel Automaten fürs Snackregal, Dispenser für die Theke. Die Nachbestellung der Dosen? Geht direkt über uns.<br>
                   Jetzt Automatenlösungen entdecken – und dein Sortiment gezielt ergänzen."
       Additional="* Quelle: NIQ Brand Health Tracker 2024"
       noButton

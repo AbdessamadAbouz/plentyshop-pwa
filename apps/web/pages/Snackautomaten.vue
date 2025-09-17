@@ -2,28 +2,20 @@
   <div class="mx-auto">
     <LandingPageHeader 
       subtitle="Snackautomaten für Büro, Pausenraum und Werkstatt - Sortiment & Service"
-      description="Smarte Snacklösung für den Pausenraum<br>
-                  Snacks bereitstellen, ohne Aufwand? Genau dafür gibt’s den <a class='font-bold' href='https://b2b.kelloggs-shop.de/snacks/b2b-starterkits/'>Pringles<span class='text-sm align-super'>®</span> Dispenser.</a><br>
-                  Einfach aufstellen, 40 g Dosen einlegen – das war’s. Kein Strom, kein System, keine<br>
-                  Einweisung. Der Dispenser eignet sich für Büros, Werkstätten und Sozialräume – überall dort, wo Snacks unkompliziert griffbereit sein sollen.<br>
-                  Ein Handgriff, ein kurzer Moment Pause – mehr braucht’s nicht."
+      description="Smarte Snacklösung für den Pausenraum Snacks bereitstellen, ohne Aufwand? Genau dafür gibt’s den <a class='font-bold' href='https://b2b.kelloggs-shop.de/snacks/b2b-starterkits/'>Pringles<span class='text-sm align-super'>®</span> Dispenser.</a> Einfach aufstellen, 40 g Dosen einlegen – das war’s. Kein Strom, kein System, keine. Einweisung. Der Dispenser eignet sich für Büros, Werkstätten und Sozialräume – überall dort, wo Snacks unkompliziert griffbereit sein sollen. Ein Handgriff, ein kurzer Moment Pause – mehr braucht’s nicht."
       noMarginTop
       headerTop
     />
 
     <LandingPagePresentation imageSrc="/images/snackautomaten/1.png" 
         Title="Wertschätzung zeigen – ganz nebenbei" 
-        Description="Der <a class='font-bold' href='https://b2b.kelloggs-shop.de/snacks/b2b-starterkits/'>Pringles<span class='text-sm align-super'>®</span> Dispenser</a>. bringt nicht nur Snacks in Reichweite – sondern macht sichtbar: Hier wird an die Pause gedacht.<br>
-                    Dank auffälligem Design zieht er Blicke auf sich, das Handling bleibt dabei simpel.<br>
-                    Ob neben dem Kaffeeautomaten, in der Teeküche oder am Flurende – der Dispenser passt sich an."
+        Description="Der <a class='font-bold' href='https://b2b.kelloggs-shop.de/snacks/b2b-starterkits/'>Pringles<span class='text-sm align-super'>®</span> Dispenser</a>. bringt nicht nur Snacks in Reichweite – sondern macht sichtbar: Hier wird an die Pause gedacht. Dank auffälligem Design zieht er Blicke auf sich, das Handling bleibt dabei simpel. Ob neben dem Kaffeeautomaten, in der Teeküche oder am Flurende – der Dispenser passt sich an."
         noButton
         noPadding
         />
     <LandingPagePresentation imageLeft :bgColor="'bg-gray-100'" imageSrc="/images/snackautomaten/2.jpg" 
         Title="Ein System, das mitläuft" 
-        Description="Stabil, kompakt, hygienisch: Der <a class='font-bold' href='https://b2b.kelloggs-shop.de/snacks/b2b-starterkits/'>Pringles<span class='text-sm align-super'>®</span> Dispenser</a> funktioniert ohne Technik oder<br>
-                    Wartung. Die 40 g Dosen lassen sich schnell nachlegen, ganz ohne Kühlaufwand.<br>
-                    So entsteht ein Snackangebot, das flexibel bleibt – und sich in viele Alltagssituationen integrieren lässt." 
+        Description="Stabil, kompakt, hygienisch: Der <a class='font-bold' href='https://b2b.kelloggs-shop.de/snacks/b2b-starterkits/'>Pringles<span class='text-sm align-super'>®</span> Dispenser</a> funktioniert ohne Technik oder Wartung. Die 40 g Dosen lassen sich schnell nachlegen, ganz ohne Kühlaufwand. So entsteht ein Snackangebot, das flexibel bleibt – und sich in viele Alltagssituationen integrieren lässt." 
         noButton
         noPadding
         />
@@ -31,11 +23,7 @@
 
     <LandingPagePresentation imageSrc="/images/snackautomaten/3.jpg" 
       Title="Kleine Geste, großer Effekt" 
-      Description="Ein Griff zur Dose – mehr braucht es oft nicht für einen kurzen Snackmoment.<br>
-                  Der Dispenser bringt knusprige Abwechslung genau dahin, wo Menschen zusammenkommen – sichtbar, zugänglich, bereit.<br>
-                  Ob fürs Homeoffice-Team, den Schichtbetrieb oder das Büro mit Laufkundschaft:<br>
-                  So wird Snackversorgung einfach gemacht – alltagstauglich, markenstark und ohne<br>
-                  Extraaufwand. Jetzt entdecken und Pausenräume unkompliziert ausstatten."
+      Description="Ein Griff zur Dose – mehr braucht es oft nicht für einen kurzen Snackmoment. Der Dispenser bringt knusprige Abwechslung genau dahin, wo Menschen zusammenkommen – sichtbar, zugänglich, bereit. Ob fürs Homeoffice-Team, den Schichtbetrieb oder das Büro mit Laufkundschaft: So wird Snackversorgung einfach gemacht – alltagstauglich, markenstark und ohne Extraaufwand. Jetzt entdecken und Pausenräume unkompliziert ausstatten."
       noButton
       noPadding
       />

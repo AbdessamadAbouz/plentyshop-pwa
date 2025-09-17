@@ -9,7 +9,7 @@
       headerTop
     />
 
-    <LandingPagePresentation imageSrc="/images/Buerosnacks/PringlesAutomat.jpg" 
+    <LandingPagePresentation imageSrc="/images/Buerosnacks/Burosnack.jpg" 
         Title="Praktisch im Handling – beliebt im Automaten" 
         Description="Im Snackautomaten zählt nicht nur, was da ist, sondern was auch genommen wird.<br>
                     <a class='font-bold' href='https://b2b.kelloggs-shop.de/snacks/pringles'>Pringles®</a> im bekannten Dosenformat bietet genau das: kompakt, hygienisch, unkompliziert.<br>
