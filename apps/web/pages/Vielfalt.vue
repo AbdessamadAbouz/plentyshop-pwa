@@ -19,10 +19,11 @@
         />
     <LandingPagePresentation imageLeft :bgColor="'bg-gray-100'" imageSrc="/images/vielfalt/2.jpg" 
         Title="Flexible Lösungen für unterschiedliche Anforderungen" 
-        Description="Großgebinde für hygienische Spendersysteme. <br>
-                    Portionsgrößen für mehr Planbarkeit. <br>
-                    Toppings, die Frühstücksangebote optisch und geschmacklich abrunden. <br>
-                    Alle Produkte sind lang haltbar, leicht zu lagern und flexibel kombinierbar – ideal für Hotellerie, die Wert auf Übersicht und Alltagstauglichkeit legt." 
+        Description="<ul class='ml-4 '>
+                    <li class='text-gray-600 text-sm font-[400] pr-[20px] leading-[27px] max-w-[500px]' style='list-style: disc;'>Großgebinde für hygienische Spendersysteme. </li>
+                    <li class='text-gray-600 text-sm font-[400] pr-[20px] leading-[27px] max-w-[500px]' style='list-style: disc;'>Portionsgrößen für mehr Planbarkeit. </li>
+                    <li class='text-gray-600 text-sm font-[400] pr-[20px] leading-[27px] max-w-[500px]' style='list-style: disc;'>Toppings, die Frühstücksangebote optisch und geschmacklich abrunden. </li>
+                    <li class='text-gray-600 text-sm font-[400] pr-[20px] leading-[27px] max-w-[500px]' style='list-style: disc;'>Alle Produkte sind lang haltbar, leicht zu lagern und flexibel kombinierbar – ideal für Hotellerie, die Wert auf Übersicht und Alltagstauglichkeit legt.</li></ul>" 
         noButton
         noPadding
         />

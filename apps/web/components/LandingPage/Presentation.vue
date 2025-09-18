@@ -19,8 +19,8 @@
             <p class="text-xs text-gray-600 uppercase text-[17px]" v-html="SubTitle"></p>
             <h2 class="text-2xl font-bold text-gray-800 mt-2 text-[33px] my-[16px] leading-[33px]" v-html="Title">
             </h2>
-            <p class="text-gray-600 mt-4 text-sm text-[20px] pr-[20px] leading-[27px] max-w-[500px]" v-html="Description">
-            </p>
+            <div class="text-gray-600 mt-4 text-sm text-[20px] pr-[20px] leading-[27px] max-w-[500px]" v-html="Description">
+            </div>
             <p class="text-xs text-gray-500 mt-2 text-[12px]" v-html="Additional">
             </p>
           </div>
