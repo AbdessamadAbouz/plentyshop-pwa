@@ -29,17 +29,18 @@
       <div class="lg:py-6 lg:px-4 lg:ml-12 relative col-span-5 md:sticky md:top-10 h-fit mt-4 lg:mt-0 lg:px-12"
            :class="{ 'pointer-events-none opacity-50': loading }">
         <SfLoaderCircular v-if="loading" class="absolute top-[130px] right-0 left-0 m-auto z-[999]" size="2xl" />
-        <OrderSummary class="kl-summary" :cart="cart">
+        <OrderSummary class="kl-summary" :cart="cart" @checkout-disabled="handleCheckoutDisabled">
           <!-- <Coupon v-if="viewport.isGreaterOrEquals('lg')" class="mb-5" /> -->
           <UiButton
                     data-testid="checkout-button"
-                    :tag="NuxtLink"
-                    :to="goToCheckout()"
+                    :tag=" !isCheckoutButtonDisabled ? NuxtLink : ''"
+                    :to="!isCheckoutButtonDisabled ? goToCheckout() : ''"
                     size="lg"
-                    class="w-full mb-4 md:mb-0 shadow-none lg:bg-primary-500 lg:text-white lg:g-16">
+                    class="w-full mb-4 md:mb-0 shadow-none lg:bg-primary-500 lg:text-white lg:g-16"
+                    :disabled="isCheckoutButtonDisabled">
             {{ t('goToCheckout') }}
           </UiButton>
-          <client-only>
+          <client-only v-if="!isCheckoutButtonDisabled">
             <PayPalExpressButton :disabled="loading" class="mt-4" type="CartPreview" />
             <PayPalPayLaterBanner placement="cart" :amount="cartGetters.getTotal(cartGetters.getTotals(cart))" />
           </client-only>
@@ -83,6 +84,12 @@ const shippingRules = [
 const NuxtLink = resolveComponent('NuxtLink');
 const { t } = useI18n();
 const viewport = useViewport();
+const isCheckoutButtonDisabled = ref(false);
+
+const handleCheckoutDisabled = (disabled: boolean) => {
+  isCheckoutButtonDisabled.value = disabled;
+};
+
 const localePath = useLocalePath();
 const { isAuthorized } = useCustomer();
 const { data: cart, cartIsEmpty, loading } = useCart();

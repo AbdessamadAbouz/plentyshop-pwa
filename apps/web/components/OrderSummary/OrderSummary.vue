@@ -24,7 +24,12 @@
       <UiDivider class="mb-2 w-auto" />
 
       <KelloggsFreeShippingCalculator :cart="cart"></KelloggsFreeShippingCalculator>
-
+      <KelloggsWeightBasedFreeShippingCalculator 
+        :cart="cart" 
+        v-if="user?.user?.classId === 14" 
+        @update:remainingWeight="handleRemainingWeightUpdate"
+      />
+      
       <div class="flex justify-between typography-text-base pb-4 pt-2">
         <div class="flex flex-col gap-2 grow pr-2">
           <p class="g-12-m lg:g-16-m" data-testid="subtotal-label">{{ t('itemsSubtotal') }}</p>
@@ -76,9 +81,20 @@
 <script setup lang="ts">
 import { cartGetters } from '@plentymarkets/shop-api';
 import type { OrderSummaryPropsType } from '~/components/OrderSummary/types';
+import KelloggsWeightBasedFreeShippingCalculator from '~/components/Kelloggs/WeightBasedFreeShippingCalculator.vue';
+const { data: user } = useCustomer();
+
+
 
 const props = defineProps<OrderSummaryPropsType>();
 const { t, n } = useI18n();
+const emit = defineEmits(['checkout-disabled']);
+
+const handleRemainingWeightUpdate = (remainingWeight: number) => {
+  console.log('Remaining weight for free shipping:', remainingWeight > 0);
+  console.log('Emitting checkout-disabled event with value:', remainingWeight > 0);
+  emit('checkout-disabled', remainingWeight > 0);
+};
 
 const totals = computed(() => {
   const totalsData = cartGetters.getTotals(props.cart);
