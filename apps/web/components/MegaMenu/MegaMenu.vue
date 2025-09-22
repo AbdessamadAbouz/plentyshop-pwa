@@ -113,7 +113,7 @@
               <div>
                 <ul class="flex flex-col space-y-2">
                  <li>
-                    <SfListItem :tag="NuxtLink" size="sm" href="https://snackinginsel.de/" class="py-1.5 g-16-m">
+                    <SfListItem :tag="NuxtLink" size="sm" href="/snacks/automaten/" class="py-1.5 g-16-m">
                       Pringles Automat
                     </SfListItem>
                   </li>
