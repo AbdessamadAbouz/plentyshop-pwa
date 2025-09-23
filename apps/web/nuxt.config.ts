@@ -153,7 +153,7 @@ export default defineNuxtConfig({
     exposeConfig: true,
   },
   turnstile: {
-    siteKey: process.env?.TURNSTILESITEKEY,
+    siteKey: process.env?.TURNSTILESITEKEY ?? '0x4AAAAAAANx3aXDh7UR35x0',
   },
   viewport: {
     breakpoints: {
