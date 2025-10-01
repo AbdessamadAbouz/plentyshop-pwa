@@ -37,7 +37,7 @@
               <p class="g-12-m mt-1 text-gray-600">{{ product.variation.weightG }}g ({{ n(getKgPrice(product), 'currency') }}/kg )</p>
               <div class="g-12-m flex mb-4 mt-1">
                 <span>{{ t('asterisk') }}</span>
-                <span class="mr-1">{{ showNetPrices ? t('itemExclVAT') : t('itemInclVAT') }}</span>
+                <span class="mr-1">{{ t('itemExclVAT') }}</span>
                 <span>{{ t('excludedShipping') }}</span>
               </div>
             </div>

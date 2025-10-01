@@ -677,7 +677,7 @@
   },
   "imageOfSth": "Bild von {name}",
   "invalidPassword": "Mindestens 8 Zeichen lang und muss mindestens einen Buchstaben und eine Zahl enthalten.",
-  "itemExclVAT": "zzgl. ges. MwSt",
+  "itemExclVAT": "exkl. MwSt",
   "itemInclVAT": "inkl. ges. MwSt",
   "itemNotAvailable": "Der Artikel ist nicht verfügbar",
   "itemsInCart": "(Artikel: {count})",
