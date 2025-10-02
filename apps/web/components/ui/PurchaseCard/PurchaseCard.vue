@@ -38,7 +38,7 @@
               <div class="g-12-m flex mb-4 mt-1">
                 <span>{{ t('asterisk') }}</span>
                 <span class="mr-1">{{ t('itemExclVAT') }}</span>
-                <span>{{ t('excludedShipping') }}</span>
+
               </div>
             </div>
 
