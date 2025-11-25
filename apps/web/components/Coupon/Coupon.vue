@@ -9,7 +9,7 @@
           />
         </div>
       </template> -->
-      <div class="flex mb-4">
+      <div class="flex my-4">
         <div class="flex-grow mr-2" data-testid="couponCode">
           <SfInput
             v-model="couponCode"
@@ -59,7 +59,7 @@
 <script setup lang="ts">
 import { cartGetters } from '@plentymarkets/shop-api';
 import { SfAccordionItem, SfIconChevronLeft, SfIconClose, SfInput, SfLoaderCircular } from '@storefront-ui/vue';
-const openedCoupon = ref(false);
+const openedCoupon = ref(true);
 const couponCode = ref('');
 const { addCoupon, deleteCoupon, loading } = useCoupon();
 const { data: cart } = useCart();
@@ -69,8 +69,4 @@ const handleDeleteCoupon = async () => {
   couponCode.value = '';
 };
 
-onMounted(() => {
-  couponCode.value = cartGetters.getCouponCode(cart.value);
-  openedCoupon.value = cartGetters.getCouponDiscount(cart.value) !== 0;
-});
 </script>
