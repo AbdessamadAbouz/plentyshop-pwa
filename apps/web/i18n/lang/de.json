@@ -720,6 +720,7 @@
   "manageAddresses": "Verwalten Sie Ihre Adressen",
   "manufacturer": {
     "euResponsibleTabName": "EU Verantwortliche Person",
+    "combinedTabName": "Hersteller/ EU Verantwortliche Person",
     "header": "Angaben zum Hersteller",
     "logoAlt": "Herstellerlogo",
     "manufacturerTabName": "Hersteller",

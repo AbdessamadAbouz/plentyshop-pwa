@@ -680,6 +680,7 @@
   "manageAddresses": "Manage your addresses",
   "manufacturer": {
     "euResponsibleTabName": "EU Responsible Person",
+    "combinedTabName": "Manufacturer / EU Responsible Person",
     "header": "Manufacturer details",
     "logoAlt": "Manufacturer logo",
     "manufacturerTabName": "Manufacturer",
